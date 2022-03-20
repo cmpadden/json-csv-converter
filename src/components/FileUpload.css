@@ -1,0 +1,20 @@
+.file-area {
+  width: 450px;
+  height: 450px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border: 2px #c3c3c3 dashed;
+  border-radius: 12px;
+  background-color: white;
+
+  font-size: 24px;
+  color: #555555;
+}
+
+.file-hovering {
+  border: 2px seagreen dashed;
+  background-color: lightyellow;
+}

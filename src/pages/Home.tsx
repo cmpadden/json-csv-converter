@@ -1,7 +1,12 @@
-import React, { ReactElement, FC } from "react";
-import { Box, Typography } from "@mui/material";
+import { ReactElement, FC } from "react";
+import { Box } from "@mui/material";
+import FileUpload from "../components/FileUpload";
 
 const Home: FC<any> = (): ReactElement => {
+  const fileHandler = (files: FileList) => {
+    console.log(files);
+  };
+
   return (
     <Box
       sx={{
@@ -12,7 +17,13 @@ const Home: FC<any> = (): ReactElement => {
         alignItems: "center",
       }}
     >
-      <Typography variant="h3">Home</Typography>
+      <FileUpload
+        fileHandler={fileHandler}
+        fileLimit={1}
+        allowedExtensions={["xml"]}
+      >
+        Drag a File In Here...
+      </FileUpload>
     </Box>
   );
 };
