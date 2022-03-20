@@ -1,7 +1,9 @@
 import { FC, ReactElement } from "react";
-import { Box, Link, Container, Toolbar, Typography } from "@mui/material";
+import { Box, Link, Container, Toolbar } from "@mui/material";
 import { routes } from "../routes";
 import { NavLink } from "react-router-dom";
+
+import SwapCallsIcon from "@mui/icons-material/SwapCalls";
 
 const Navigation: FC = (): ReactElement => {
   return (
@@ -14,16 +16,8 @@ const Navigation: FC = (): ReactElement => {
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              display: { xs: "none", md: "flex" },
-            }}
-          >
-            Apache Arrow File Converter
-          </Typography>
+        <Toolbar>
+          <SwapCallsIcon sx={{ fontSize: 40 }} />
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Box
               sx={{

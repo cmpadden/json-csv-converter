@@ -21,11 +21,19 @@ const FileUpload: FC<FileUploadProps> = ({
 }): ReactElement => {
   const [hovering, setHovering] = React.useState(false);
 
-  const handleDragEnter = (event: DragEvent) => {
+  const handleDragover = (event: DragEvent) => {
     event.preventDefault();
     event.stopPropagation();
-    setHovering(true);
+    if (!hovering) {
+      setHovering(true);
+    }
   };
+
+  // const handleDragEnter = (event: DragEvent) => {
+  //   event.preventDefault();
+  //   event.stopPropagation();
+  //   setHovering(true);
+  // };
 
   const handleDragLeave = (event: DragEvent) => {
     event.preventDefault();
@@ -71,7 +79,8 @@ const FileUpload: FC<FileUploadProps> = ({
 
   const fileUploadRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
-    fileUploadRef?.current?.addEventListener("dragenter", handleDragEnter);
+    fileUploadRef?.current?.addEventListener("dragover", handleDragover);
+    // fileUploadRef?.current?.addEventListener("dragenter", handleDragEnter);
     fileUploadRef?.current?.addEventListener("dragleave", handleDragLeave);
     fileUploadRef?.current?.addEventListener("drop", handleDrop);
   }, []);

@@ -15,12 +15,7 @@ export const Footer: FC = (): ReactElement => {
       <Container maxWidth="lg">
         <Grid container direction="column" alignItems="center">
           <Grid item xs={12}>
-            <Typography color="white" variant="h6">
-              Apache Arrow File Converter
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography color="white" variant="subtitle1">
+            <Typography variant="subtitle2" color="dimgrey">
               {`${new Date().getFullYear()}`}
             </Typography>
           </Grid>
