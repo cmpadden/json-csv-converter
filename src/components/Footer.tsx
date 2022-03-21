@@ -16,7 +16,7 @@ export const Footer: FC = (): ReactElement => {
         <Grid container direction="column" alignItems="center">
           <Grid item xs={12}>
             <Typography variant="subtitle2" color="dimgrey">
-              {`${new Date().getFullYear()}`}
+              CSV / JSON Converter
             </Typography>
           </Grid>
         </Grid>
