@@ -36,7 +36,7 @@ const Home: FC<any> = (): ReactElement => {
           <FileUpload
             fileHandler={fileHandler}
             fileLimit={1}
-            allowedExtensions={["xml"]}
+            allowedExtensions={["csv", "json"]}
           >
             <Box
               sx={{
